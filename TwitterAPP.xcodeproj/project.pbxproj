@@ -10,12 +10,12 @@
 		517D73112927D18800BBCF0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73102927D18800BBCF0D /* AppDelegate.swift */; };
 		517D73132927D18800BBCF0D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73122927D18800BBCF0D /* SceneDelegate.swift */; };
 		517D73152927D18800BBCF0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73142927D18800BBCF0D /* ViewController.swift */; };
-		517D73182927D18800BBCF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517D73162927D18800BBCF0D /* Main.storyboard */; };
 		517D731A2927D18B00BBCF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 517D73192927D18B00BBCF0D /* Assets.xcassets */; };
 		517D731D2927D18B00BBCF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 517D731B2927D18B00BBCF0D /* LaunchScreen.storyboard */; };
 		517D73282927D18B00BBCF0D /* TwitterAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73272927D18B00BBCF0D /* TwitterAPPTests.swift */; };
 		517D73322927D18B00BBCF0D /* TwitterAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73312927D18B00BBCF0D /* TwitterAPPUITests.swift */; };
 		517D73342927D18B00BBCF0D /* TwitterAPPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517D73332927D18B00BBCF0D /* TwitterAPPUITestsLaunchTests.swift */; };
+		51FDADC82927D703001C1BB9 /* TwitterPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 51FDADC72927D703001C1BB9 /* TwitterPackage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 		517D732D2927D18B00BBCF0D /* TwitterAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		517D73312927D18B00BBCF0D /* TwitterAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPPUITests.swift; sourceTree = "<group>"; };
 		517D73332927D18B00BBCF0D /* TwitterAPPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAPPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51FDADC52927D6C9001C1BB9 /* TwitterPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TwitterPackage; path = ../../TwitterPackage; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51FDADC82927D703001C1BB9 /* TwitterPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +81,12 @@
 		517D73042927D18800BBCF0D = {
 			isa = PBXGroup;
 			children = (
+				51FDADC42927D6C9001C1BB9 /* Packages */,
 				517D730F2927D18800BBCF0D /* TwitterAPP */,
 				517D73262927D18B00BBCF0D /* TwitterAPPTests */,
 				517D73302927D18B00BBCF0D /* TwitterAPPUITests */,
 				517D730E2927D18800BBCF0D /* Products */,
+				51FDADC62927D703001C1BB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +131,21 @@
 			path = TwitterAPPUITests;
 			sourceTree = "<group>";
 		};
+		51FDADC42927D6C9001C1BB9 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				51FDADC52927D6C9001C1BB9 /* TwitterPackage */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		51FDADC62927D703001C1BB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +162,9 @@
 			dependencies = (
 			);
 			name = TwitterAPP;
+			packageProductDependencies = (
+				51FDADC72927D703001C1BB9 /* TwitterPackage */,
+			);
 			productName = TwitterAPP;
 			productReference = 517D730D2927D18800BBCF0D /* TwitterAPP.app */;
 			productType = "com.apple.product-type.application";
@@ -233,7 +255,6 @@
 			files = (
 				517D731D2927D18B00BBCF0D /* LaunchScreen.storyboard in Resources */,
 				517D731A2927D18B00BBCF0D /* Assets.xcassets in Resources */,
-				517D73182927D18800BBCF0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -420,6 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -441,7 +464,7 @@
 				INFOPLIST_FILE = TwitterAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +491,7 @@
 				INFOPLIST_FILE = TwitterAPP/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +619,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		51FDADC72927D703001C1BB9 /* TwitterPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TwitterPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 517D73052927D18800BBCF0D /* Project object */;
 }
